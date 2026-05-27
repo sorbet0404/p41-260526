@@ -1,5 +1,4 @@
 package com.back
-
 import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -14,13 +13,13 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 @SpringBootTest
 @ActiveProfiles("test")
 @AutoConfigureMockMvc
-class Back2ApplicationTests {
+class BackApplicationTests {
 
 	@Autowired
 	private lateinit var mvc: MockMvc
 
-	@DisplayName("GET /buckets")
 	@Test
+	@DisplayName("GET /buckets")
 	fun t1() {
 		val resultActions = mvc
 			.perform(
